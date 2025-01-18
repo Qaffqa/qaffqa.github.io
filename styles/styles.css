@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+/*Contenido*/
+.contenido {
+    width: 50%; 
+    max-width: 1200px; 
+    margin-top: 20px; 
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.contenido p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Estilo del poema */
+.poem {
+    font-family: 'Georgia', serif; 
+    line-height: 0.5; 
+    font-size: 1; 
+    text-align: left; 
+}
+
+/*Estilo de la galeria portfolio.html*/
+.headerPortfolio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    box-sizing: border-box;
+}
+.gallery {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
+    padding: 20px;
+    justify-content: center;
+}
+.gallery img {
+    width: 100%; 
+    height: auto;
+}
+.gallery .wide {
+    grid-column: span 2;
+}
+
+/*Estilo enlaces about.html*/
+.links-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-list a {
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 16px;
+    display: inline-block;
+}
+
+/*Estilo del formulario*/
+.contact-container {
+    float: right;
+    width: 50%; 
+    
+}
+.contact-form {
+    max-width: 400px;
+    width: 100%;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    font-size: 14px;
+}
+
+/*Estilo de los enlaces en contact.html*/
+.links-social {
+    list-style-type: none;
+    float: left;
+    width: 50%;
+
+}
+
+.links-list-social a {
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 16px;
+    display: inline-block;
+}
