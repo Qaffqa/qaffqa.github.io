@@ -1,11 +1,17 @@
+/* Estilos por defecto (escritorio) */
+nav {
+    display: none; /* Ocultar el nav en escritorio */
+}
+
+/* Estilos para dispositivos móviles */
 @media only screen and (max-width: 768px) {
     header,
     img {
-        display: none;
+        display: none; /* Ocultar el header y las imágenes en móviles */
     }
 
     nav {
-        display: block;
+        display: block; /* Mostrar el nav en móviles */
         text-align: left;
         padding: 10px;
     }
@@ -51,8 +57,4 @@
         text-align: center;
         font-size: 0.9em;
     }
-}
-
-nav {
-    display: none;
 }
