@@ -12,16 +12,6 @@ nav {
 
     nav {
         display: block; /* Mostrar el nav en móviles */
-        text-align: left;
-        padding: 10px;
-    }
-
-    nav a {
-        display: block;
-        text-decoration: none;
-        color: black;
-        font-size: 1.2em;
-        padding: 8px 0;
     }
 
     body {
@@ -29,12 +19,6 @@ nav {
         font-family: Arial, sans-serif;
         padding: 0;
         background-color: #f4f4f4;
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        height: auto;
     }
 
     .aboutDesc,
@@ -58,3 +42,4 @@ nav {
         font-size: 0.9em;
     }
 }
+
