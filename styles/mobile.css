@@ -6,21 +6,16 @@
 
     nav {
         display: block;
-        padding: 0;
         text-align: left;
-        margin-top: 0;
+        padding: 10px;
     }
 
     nav a {
         display: block;
         text-decoration: none;
         color: black;
-        padding: 8px 0;
         font-size: 1.2em;
-    }
-
-    a:visited {
-        color: black;
+        padding: 8px 0;
     }
 
     body {
@@ -29,25 +24,26 @@
         padding: 0;
         background-color: #f4f4f4;
         overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
     }
 
-    .aboutDesc, .poema {
-        margin: 0;
-        padding: 10px;
-        text-align: left;
-    }
-
+    .aboutDesc,
     .poema {
         width: 100%;
         box-sizing: border-box;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        font-size: 1em;
+        padding: 10px;
+        text-align: left;
     }
 
     .poema p {
         margin: 0.5em 0;
         line-height: 1.6;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 
     footer {
