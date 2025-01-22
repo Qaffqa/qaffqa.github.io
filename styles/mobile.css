@@ -6,40 +6,46 @@ nav {
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 768px) {
     header,
-    img {
-        display: none; /* Ocultar el header y las imágenes en móviles */
+    img[alt="Figure of Telesphorus"] {
+        display: none;
     }
 
     nav {
-        display: block; /* Mostrar el nav en móviles */
+        display: block;
+        font-size: larger;
     }
 
     body {
         margin: 0;
-        font-family: Arial, sans-serif;
         padding: 0;
-        background-color: #f4f4f4;
     }
 
-    .aboutDesc,
+    .aboutDesc {
+        position: inherit;
+        line-height: 130%;
+    }
     .poema {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 10px;
-        text-align: left;
+        
+        position: absolute;
+        right: -200px;
+
     }
 
-    .poema p {
+    .ocurrencias {
+        position: absolute;
+        display: contents;
+    }
+    .contact {
+        position: absolute;
+        display: block;
+    }
+
+    div.poema  p {
+        display: block;
         margin: 0.5em 0;
         line-height: 1.6;
         overflow-wrap: break-word;
         word-wrap: break-word;
-    }
-
-    footer {
-        margin-top: 20px;
-        text-align: center;
-        font-size: 0.9em;
     }
 }
 
