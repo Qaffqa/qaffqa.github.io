@@ -1,63 +1,55 @@
-/* Estilos para dispositivos móviles (máximo 768px) */
 @media only screen and (max-width: 768px) {
-    /* Ocultar imágenes y otros elementos visuales */
     header,
     img {
-        display: none; /* Ocultar todas las imágenes */
+        display: none;
     }
 
-    /* Mostrar el nav como lista de enlaces */
     nav {
-        display: block; /* Mostrar el nav */
+        display: block;
         padding: 0;
-        text-align: left; /* Alineación izquierda para los enlaces */
-        margin-top: 0; /* Quitar margen superior */
+        text-align: left;
+        margin-top: 0;
     }
 
     nav a {
-        display: block; /* Los enlaces se mostrarán en bloque (uno debajo de otro) */
+        display: block;
         text-decoration: none;
         color: black;
         padding: 8px 0;
         font-size: 1.2em;
     }
 
-    /* Quitar el estilo de visita de los enlaces */
     a:visited {
-        color: black; /* Los enlaces visitados también tendrán el color negro */
+        color: black;
     }
 
-    /* Estilo para el cuerpo de la página */
     body {
         margin: 0;
-        font-family: Arial, sans-serif; /* Usar una fuente sencilla y sin serifas */
+        font-family: Arial, sans-serif;
         padding: 0;
-        background-color: #f4f4f4; /* Fondo gris claro */
+        background-color: #f4f4f4;
+        overflow-x: hidden;
     }
 
-    /* Estilo para el contenido de la página */
     .aboutDesc, .poema {
         margin: 0;
         padding: 10px;
-        text-align: left; /* Alinear el texto a la izquierda */
+        text-align: left;
     }
 
-    /* Eliminar el formato del poema y hacerlo plano */
     .poema {
-        width: 100%; /* Asegurar que ocupe el 100% del ancho disponible */
-        box-sizing: border-box; /* Incluir el padding en el cálculo del ancho */
-        overflow-wrap: break-word; /* Permitir que las palabras largas se ajusten */
-        word-wrap: break-word; /* Para navegadores más antiguos */
-        font-size: 1em; /* Tamaño de fuente más pequeño para el poema */
+        width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        font-size: 1em;
     }
 
-    /* Estilo de los párrafos dentro del poema */
     .poema p {
-        margin: 0.5em 0; /* Espacio entre los párrafos */
-        line-height: 1.6; /* Asegura que haya espacio entre las líneas */
+        margin: 0.5em 0;
+        line-height: 1.6;
     }
 
-    /* Eliminar el estilo predeterminado para el footer */
     footer {
         margin-top: 20px;
         text-align: center;
@@ -65,7 +57,6 @@
     }
 }
 
-/* Ocultar el nav por defecto en pantallas grandes */
 nav {
-    display: none; /* Ocultar el nav en pantallas grandes por defecto */
+    display: none;
 }
