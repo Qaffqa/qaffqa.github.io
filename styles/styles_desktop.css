@@ -1,0 +1,97 @@
+body {
+    place-items: center;
+}
+p::selection,
+a::selection {
+    background-color: yellow;
+    color: black;
+}
+span > div p {
+    position: relative;
+    left: -300px; 
+    bottom: -25px;
+    margin: 0.1em 0;
+    text-align: left;
+    line-height: 1.5; 
+    font-family: 'Georgia', serif; 
+    font-size: 1rem;
+    place-items: left;
+}
+img[src="img/telesphorus.jpg"] {
+    position: relative;
+    top: -620px;
+    right: -145px;
+    width: 500px;
+}
+.aboutDesc {
+    position: relative;
+    right: 100px;
+    bottom: -40px;
+    margin: 0.1em 0;
+    text-align: left;
+    line-height: 0.5; 
+    font-family: 'Times New Roman', serif; 
+    font-size: 1rem;
+    place-items: left;
+}
+span > div > ul.ocurrencias{
+    list-style-type: none;
+    position: relative;
+    right: 300px;
+    bottom: -40x;
+    line-height: 2.5; 
+    font-family: 'Times New Roman', serif; 
+    place-items: left;
+}
+.contact {
+    list-style-type: none;
+    position: relative;
+    right: 400px;
+    bottom: -40x;
+    line-height: 2.5; 
+    font-family: 'Times New Roman', serif; 
+    place-items: left;
+}
+span > div > ul + p {
+    position: relative;
+    right: 245px;
+}
+a:visited {
+    color: orangered;
+}
+
+/*
+GALERIA
+*/
+
+.galery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    gap: 20px;                              
+    justify-items: center;                  
+    padding: 20px;
+    max-width: 100%;                        
+}
+.galery img {
+    max-width: 200px;     
+    width: 100%;          
+    height: auto;         
+    object-fit: cover;
+}
+.galery .wide {
+    grid-column: span 2;
+}
+.galery .wide img {
+    max-width: 100%; 
+    width: 400px; 
+}
+.galery a:hover {
+    opacity: 0.7;  
+}
+
+
+
+
+
+
+

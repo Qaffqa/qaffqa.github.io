@@ -1,0 +1,52 @@
+/* Ocultar el header en dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    header,
+    img[alt="Figure of Telesphorus"] {
+        display: none;
+    }
+
+    /* Mostrar un nav sencillo en móviles */
+    nav {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.2em;
+    }
+
+    a:visited {
+        color: black;
+    }
+
+    /* Centrar el poema en dispositivos móviles */
+    .poema {
+        text-align: center; /* Centrar el texto */
+        margin: 0 auto; /* Centrar el contenedor */
+        padding: 10px 15px; /* Añadir espacio alrededor del poema */
+        width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+        box-sizing: border-box; /* Incluir padding en el cálculo del ancho */
+        overflow-wrap: break-word; /* Permite que las palabras largas se ajusten */
+        word-wrap: break-word; /* Para navegadores más antiguos */
+    }
+
+    /* Asegura que el poema no se desborde */
+    .poema p {
+        max-width: 100%; /* Evita que los párrafos se desborden */
+        margin: 0.5em 0; /* Añade espacio entre los párrafos */
+    }
+
+    /* Si quieres que el poema esté completamente centrado también verticalmente, puedes usar flexbox */
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+}
