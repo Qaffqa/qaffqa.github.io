@@ -2,12 +2,12 @@
 @media only screen and (max-width: 768px) {
     header,
     img[alt="Figure of Telesphorus"] {
-        display: none;
+        display: none; /* Ocultar el header y la imagen de Telesphorus */
     }
 
     /* Mostrar un nav sencillo en móviles */
     nav {
-        display: block;
+        display: block; /* Mostrar el nav en móviles */
         text-align: center;
         padding: 10px;
     }
@@ -49,4 +49,9 @@
         height: 100vh;
         margin: 0;
     }
+}
+
+/* Ocultar el nav por defecto (en escritorio) */
+nav {
+    display: none; /* Ocultar el nav en pantallas grandes */
 }
