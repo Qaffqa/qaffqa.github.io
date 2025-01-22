@@ -25,7 +25,6 @@ nav {
         line-height: 130%;
     }
     .poema {
-        
         position: absolute;
         right: -200px;
 
@@ -37,7 +36,7 @@ nav {
     }
     .contact {
         position: absolute;
-        display: block;
+        display: contents;
     }
 
     div.poema  p {
