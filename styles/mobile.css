@@ -1,57 +1,71 @@
-/* Ocultar el header en dispositivos móviles */
+/* Estilos para dispositivos móviles (máximo 768px) */
 @media only screen and (max-width: 768px) {
+    /* Ocultar imágenes y otros elementos visuales */
     header,
-    img[alt="Figure of Telesphorus"] {
-        display: none; /* Ocultar el header y la imagen de Telesphorus */
+    img {
+        display: none; /* Ocultar todas las imágenes */
     }
 
-    /* Mostrar un nav sencillo en móviles */
+    /* Mostrar el nav como lista de enlaces */
     nav {
-        display: block; /* Mostrar el nav en móviles */
-        text-align: center;
-        padding: 10px;
+        display: block; /* Mostrar el nav */
+        padding: 0;
+        text-align: left; /* Alineación izquierda para los enlaces */
+        margin-top: 0; /* Quitar margen superior */
     }
 
     nav a {
-        color: white;
+        display: block; /* Los enlaces se mostrarán en bloque (uno debajo de otro) */
         text-decoration: none;
-        margin: 0 15px;
+        color: black;
+        padding: 8px 0;
         font-size: 1.2em;
     }
 
+    /* Quitar el estilo de visita de los enlaces */
     a:visited {
-        color: black;
+        color: black; /* Los enlaces visitados también tendrán el color negro */
     }
 
-    /* Centrar el poema en dispositivos móviles */
-    .poema {
-        text-align: center; /* Centrar el texto */
-        margin: 0 auto; /* Centrar el contenedor */
-        padding: 10px 15px; /* Añadir espacio alrededor del poema */
-        width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
-        box-sizing: border-box; /* Incluir padding en el cálculo del ancho */
-        overflow-wrap: break-word; /* Permite que las palabras largas se ajusten */
-        word-wrap: break-word; /* Para navegadores más antiguos */
-    }
-
-    /* Asegura que el poema no se desborde */
-    .poema p {
-        max-width: 100%; /* Evita que los párrafos se desborden */
-        margin: 0.5em 0; /* Añade espacio entre los párrafos */
-    }
-
-    /* Si quieres que el poema esté completamente centrado también verticalmente, puedes usar flexbox */
+    /* Estilo para el cuerpo de la página */
     body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
         margin: 0;
+        font-family: Arial, sans-serif; /* Usar una fuente sencilla y sin serifas */
+        padding: 0;
+        background-color: #f4f4f4; /* Fondo gris claro */
+    }
+
+    /* Estilo para el contenido de la página */
+    .aboutDesc, .poema {
+        margin: 0;
+        padding: 10px;
+        text-align: left; /* Alinear el texto a la izquierda */
+    }
+
+    /* Eliminar el formato del poema y hacerlo plano */
+    .poema {
+        width: 100%; /* Asegurar que ocupe el 100% del ancho disponible */
+        box-sizing: border-box; /* Incluir el padding en el cálculo del ancho */
+        overflow-wrap: break-word; /* Permitir que las palabras largas se ajusten */
+        word-wrap: break-word; /* Para navegadores más antiguos */
+        font-size: 1em; /* Tamaño de fuente más pequeño para el poema */
+    }
+
+    /* Estilo de los párrafos dentro del poema */
+    .poema p {
+        margin: 0.5em 0; /* Espacio entre los párrafos */
+        line-height: 1.6; /* Asegura que haya espacio entre las líneas */
+    }
+
+    /* Eliminar el estilo predeterminado para el footer */
+    footer {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.9em;
     }
 }
 
-/* Ocultar el nav por defecto (en escritorio) */
+/* Ocultar el nav por defecto en pantallas grandes */
 nav {
-    display: none; /* Ocultar el nav en pantallas grandes */
+    display: none; /* Ocultar el nav en pantallas grandes por defecto */
 }
