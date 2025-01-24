@@ -1,37 +1,57 @@
 body {
     place-items: center;
 }
+
+:is(h1, h2, h3, ) {
+    text-align: center;
+}
+
 p::selection,
-a::selection {
+a::selection,
+h1::selection,
+pre::selection,
+img::selection,
+th::selection {
     background-color: yellow;
     color: black;
 }
-span > div p {
+
+span>div p {
     position: relative;
-    left: -300px; 
+    left: -300px;
     bottom: -25px;
     margin: 0.1em 0;
     text-align: left;
-    line-height: 1.5; 
-    font-family: 'Georgia', serif; 
+    line-height: 1.5;
+    font-family: 'Georgia', serif;
     font-size: 1rem;
     place-items: left;
 }
+
 img[src="img/telesphorus.jpg"] {
     position: relative;
     top: -620px;
     right: -145px;
     width: 500px;
 }
+
+img.under-construction {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 /*columna derecha*/
 span#columnR {
     position: relative;
     left: 660px;
     bottom: 1153px;
-    max-width: 300px; /* Limita el ancho máximo del contenedor */
+    max-width: 300px;
+    /* Limita el ancho máximo del contenedor */
 }
 
-span#columnR > div {
+span#columnR>div {
     border: 1px solid black;
     padding: 5px;
     padding-top: 0;
@@ -40,8 +60,9 @@ span#columnR > div {
 }
 
 span#columnR table {
-    border-collapse: collapse; 
-    width: 100%; /* La tabla ocupa todo el ancho del contenedor */
+    border-collapse: collapse;
+    width: 100%;
+    /* La tabla ocupa todo el ancho del contenedor */
 }
 
 span#columnR th,
@@ -57,11 +78,13 @@ span#columnR h1 {
     text-align: center;
 }
 
-span#columnR > div > .poema2 {
+span#columnR>div>.poema2 {
     position: relative;
     left: 350px;
-    display: block; /* Asegura que el poema sea un bloque */
-    margin-top: 10px; /* Un pequeño margen para separarlo de la tabla */
+    display: block;
+    /* Asegura que el poema sea un bloque */
+    margin-top: 10px;
+    /* Un pequeño margen para separarlo de la tabla */
     width: 100%;
 }
 
@@ -71,35 +94,85 @@ span#columnR > div > .poema2 {
     bottom: -40px;
     margin: 0.1em 0;
     text-align: left;
-    line-height: 0.5; 
-    font-family: 'Times New Roman', serif; 
+    line-height: 0.5;
+    font-family: 'Times New Roman', serif;
     font-size: 1rem;
     place-items: left;
 }
-span > div > ul.ocurrencias{
+
+span>div>ul.ocurrencias {
     list-style-type: none;
     position: relative;
     right: 300px;
     bottom: -40x;
-    line-height: 2.5; 
-    font-family: 'Times New Roman', serif; 
+    line-height: 2.5;
+    font-family: 'Times New Roman', serif;
     place-items: left;
 }
+
 .contact {
     list-style-type: none;
     position: relative;
     right: 400px;
     bottom: -40x;
-    line-height: 2.5; 
-    font-family: 'Times New Roman', serif; 
+    line-height: 2.5;
+    font-family: 'Times New Roman', serif;
     place-items: left;
 }
-span > div > ul + p {
+
+span>div>ul+p {
     position: relative;
     right: 245px;
 }
+
+a {
+    text-decoration: none;
+}
+
 a:visited {
     color: black;
+}
+
+a:hover {
+    text-decoration: line-through;
+    font-style: italic;
+
+    /*ARTICULOS*/
+}
+
+article {
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+
+}
+
+section>p {
+    text-align: justify;
+    margin-bottom: 16px;
+}
+
+article>header {
+    text-align: center;
+}
+
+article>header>h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+
+}
+
+article>header>p {
+    font-size: 1rem;
+
+}
+
+blockquote {
+    margin: 20px 0;
+    padding-left: 15px;
+
+    font-style: italic;
 }
 
 /*
@@ -108,32 +181,36 @@ GALERIA
 
 .galery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);  
-    gap: 20px;                              
-    justify-items: center;                  
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
     padding: 20px;
-    max-width: 100%;                        
+    max-width: 100%;
 }
-.galery img {
-    max-width: 200px;     
-    width: 100%;          
-    height: auto;         
-    object-fit: cover;
-}
+
 .galery .wide {
     grid-column: span 2;
 }
+
 .galery .wide img {
-    max-width: 100%; 
-    width: 400px; 
-}
-.galery a:hover {
-    opacity: 0.7;  
+    max-width: 100%;
+    width: 400px;
 }
 
+.galery img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.3s;
+    position: relative;
+    z-index: 1;
+}
 
-
-
-
-
-
+.galery a:hover img {
+    opacity: 1;
+    transform: scale(2.1);
+    z-index: 10;
+    position: relative;
+}
