@@ -62,7 +62,6 @@ span#columnR>div {
 span#columnR table {
     border-collapse: collapse;
     width: 100%;
-    /* La tabla ocupa todo el ancho del contenedor */
 }
 
 span#columnR th,
@@ -82,9 +81,7 @@ span#columnR>div>.poema2 {
     position: relative;
     left: 350px;
     display: block;
-    /* Asegura que el poema sea un bloque */
     margin-top: 10px;
-    /* Un pequeño margen para separarlo de la tabla */
     width: 100%;
 }
 
