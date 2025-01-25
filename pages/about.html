@@ -24,6 +24,7 @@
                 <area target="_self" alt="Contact" title="Contact" href="contact.html" coords="701,391,830,426" shape="rect">
             </map>
         </div>
+        <button id="darkModeToggle">Turn lights off</button>
     </header>
     
     <nav hidden>
@@ -44,9 +45,15 @@
         <p>Trying to develop a story-driven text-based RPG game on Java.</p>
     </div>
 
-    <footer>
-
-    </footer>
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode')
+                ? 'Turn lights on'
+                : 'Turn lights off';
+        });
+    </script>
 </body>
 
 </html>

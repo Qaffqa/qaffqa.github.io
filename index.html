@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/mobile.css" media="only screen and (max-width: 768px)"> 
 </head>
 
-<body>
+<body class="dark-mode">
     <header>
         <div>
             <img src="img/HEADER.png" usemap="#image-map">
@@ -32,9 +32,11 @@
        <!-- <div>
             <p>Try another perspective <a href="retro/retro_index.html">HERE</a></p>
         </div>-->
+        <button id="darkModeToggle">Turn lights off</button>
     </header>
 
     <!-- Nav para móviles (visible solo en móviles) -->
+    
 
     <nav hidden>
         <a href="index.html">Home</a>
@@ -125,6 +127,16 @@
             </div>
         </div>
     </span>
+
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode')
+                ? 'Turn lights on'
+                : 'Turn lights off';
+        });
+    </script>
 </body>
 
 </html>

@@ -29,6 +29,7 @@
                     shape="rect">
             </map>
         </div>
+        <button id="darkModeToggle">Turn lights off</button>
     </header>
 
     <nav hidden>
@@ -52,6 +53,16 @@
             </ul>
         </div>
     </span>
+
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode')
+                ? 'Turn lights on'
+                : 'Turn lights off';
+        });
+    </script>
 </body>
 
 </html>

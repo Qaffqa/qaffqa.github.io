@@ -211,3 +211,37 @@ GALERIA
     z-index: 10;
     position: relative;
 }
+
+/*
+DARK MODE
+*/
+
+body.dark-mode {
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0;           /* Texto claro */
+}
+
+.dark-mode a {
+    color: #80cbc4; /* Cambia color de los enlaces */
+}
+
+.dark-mode a:hover {
+    color: #4db6ac;
+    text-decoration: underline;
+}
+
+/* Galería en modo oscuro */
+.dark-mode .galery img {
+    opacity: 0.9;
+}
+
+/* Otros elementos específicos */
+.dark-mode span#columnR {
+    border-color: #424242;
+    background-color: #1e1e1e;
+}
+
+.dark-mode blockquote {
+    color: #bdbdbd;
+    border-left: 3px solid #757575;
+}

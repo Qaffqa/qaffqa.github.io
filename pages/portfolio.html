@@ -30,6 +30,7 @@
                     shape="rect">
             </map>
         </div>
+        <button id="darkModeToggle">Turn lights off</button>
     </header>
 
     <nav hidden>
@@ -53,6 +54,15 @@
             <a href="../img/gallery/kardum.png" target="pictures"><img src="../img/gallery/kardum.png" alt="kar'dum"></a>
         </div>
     </span>
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode')
+                ? 'Turn lights on'
+                : 'Turn lights off';
+        });
+    </script>
 </body>
 
 </html>
