@@ -48,7 +48,6 @@ span#columnR {
     left: 660px;
     bottom: 1153px;
     max-width: 300px;
-    /* Limita el ancho máximo del contenedor */
 }
 
 span#columnR>div {
@@ -216,6 +215,7 @@ GALERIA
 DARK MODE
 */
 
+
 body.dark-mode {
     background-color: #121212; /* Fondo oscuro */
     color: #e0e0e0;           /* Texto claro */
@@ -244,4 +244,11 @@ body.dark-mode {
 .dark-mode blockquote {
     color: #bdbdbd;
     border-left: 3px solid #757575;
+}
+span#columnR>div {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 5px;
+    padding-top: 0;
+    padding-bottom: 30px;
+    box-sizing: border-box;
 }
