@@ -2,7 +2,7 @@ body {
     place-items: center;
 }
 
-:is(h1, h2, h3, ) {
+:is(h1) {
     text-align: center;
 }
 
@@ -78,22 +78,20 @@ span#columnR h1 {
 
 span#columnR>div>.poema2 {
     position: relative;
-    left: 350px;
+    left: 300px;
     display: block;
-    margin-top: 10px;
-    width: 100%;
+    margin: 0px, 10px, 10px;
+    width: 400px;
+}
+div.poema2>p{
+    text-align: justify;
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
 }
 
-.aboutDesc {
-    position: relative;
-    right: 100px;
-    bottom: -40px;
-    margin: 0.1em 0;
-    text-align: left;
-    line-height: 0.5;
-    font-family: 'Times New Roman', serif;
-    font-size: 1rem;
-    place-items: left;
+.aboutDesc p{
+    line-height: 10px;
 }
 
 span>div>ul.ocurrencias {
