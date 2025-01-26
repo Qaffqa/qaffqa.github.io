@@ -1,94 +1,80 @@
 body {
     place-items: center;
+    margin: 0;
 }
 
 :is(h1) {
     text-align: center;
 }
 
-p::selection,
-a::selection,
-h1::selection,
-pre::selection,
-img::selection,
-th::selection {
+ 
+:is(p, a, h1, pre, img, th)::selection{
     background-color: yellow;
     color: black;
 }
 
-span>div p {
-    position: relative;
-    left: -300px;
-    bottom: -25px;
-    margin: 0.1em 0;
-    text-align: left;
-    line-height: 1.5;
+
+/*index*/
+
+.container {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    padding: 20px;
+    padding-left: 8cm;
+}
+
+.poema {
+    max-width: 300px;
     font-family: 'Georgia', serif;
     font-size: 1rem;
-    place-items: left;
+    border-right: 500px
 }
 
-img[src="img/telesphorus.jpg"] {
-    position: relative;
-    top: -620px;
-    right: -145px;
-    width: 500px;
+.image-container {
+    width: 30%;
+    text-align: center;
 }
 
-img.under-construction {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.image-container img {
+    max-width: 100%;
+    height: auto;
 }
 
-/*columna derecha*/
-span#columnR {
-    position: relative;
-    left: 660px;
-    bottom: 1153px;
-    max-width: 300px;
+.readings {
+    width: 30%;
+    max-width: 500px;
 }
 
-span#columnR>div {
-    border: 1px solid black;
-    padding: 5px;
-    padding-top: 0;
-    padding-bottom: 30px;
-    box-sizing: border-box;
-}
-
-span#columnR table {
+.readings table {
     border-collapse: collapse;
     width: 100%;
 }
 
-span#columnR th,
-span#columnR td {
+.readings th,
+.readings td {
     border: 1px solid black;
     padding: 5px;
     text-align: center;
 }
 
-span#columnR h1 {
+.readings h1 {
     margin-top: 0;
     margin-bottom: 10px;
     text-align: center;
 }
 
-span#columnR>div>.poema2 {
-    position: relative;
-    left: 300px;
-    display: block;
-    margin: 0px, 10px, 10px;
-    width: 400px;
+.poema2 {
+    margin-top: 20px;
 }
-div.poema2>p{
+
+.poema2 p {
     text-align: justify;
     max-width: 600px;
     width: 90%;
     margin: auto;
 }
+/***/
 
 .aboutDesc p{
     line-height: 10px;
@@ -104,14 +90,21 @@ span>div>ul.ocurrencias {
     place-items: left;
 }
 
+img.under-construction {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 .contact {
     list-style-type: none;
     position: relative;
     right: 400px;
-    bottom: -40x;
+    
     line-height: 2.5;
     font-family: 'Times New Roman', serif;
-    place-items: left;
+    
 }
 
 span>div>ul+p {
