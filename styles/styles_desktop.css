@@ -76,21 +76,7 @@ body {
 }
 /***/
 
-.aboutDesc p{
-    line-height: 10px;
-}
-
-span>div>ul.ocurrencias {
-    list-style-type: none;
-    position: relative;
-    right: 300px;
-    bottom: -40x;
-    line-height: 2.5;
-    font-family: 'Times New Roman', serif;
-    place-items: left;
-}
-
-img.under-construction {
+img[src="../img/under-construction.gif"] {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -98,18 +84,10 @@ img.under-construction {
 }
 
 .contact {
+    margin-right: 600px;
     list-style-type: none;
-    position: relative;
-    right: 400px;
-    
+    padding: 0;
     line-height: 2.5;
-    font-family: 'Times New Roman', serif;
-    
-}
-
-span>div>ul+p {
-    position: relative;
-    right: 245px;
 }
 
 a {
@@ -208,8 +186,8 @@ DARK MODE
 
 
 body.dark-mode {
-    background-color: #121212; /* Fondo oscuro */
-    color: #e0e0e0;           /* Texto claro */
+    background-color: #121212; 
+    color: #e0e0e0;           
 }
 
 .dark-mode a {
