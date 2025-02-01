@@ -25,12 +25,16 @@ body {
 }
 
 .poema {
-    max-width: 300px;
+    width: 400px;
     font-family: 'Georgia', serif;
     font-size: 1rem;
     border-right: 500px
 }
-
+.poema h3 {
+    text-decoration: underline;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
 .image-container {
     width: 30%;
     text-align: center;
@@ -202,8 +206,9 @@ body.dark-mode {
 
 /* Galería en modo oscuro */
 .dark-mode .galery img {
-    opacity: 0.9;
+    opacity: 0.5;
 }
+
 
 .dark-mode .readings th,
 .dark-mode .readings td{
