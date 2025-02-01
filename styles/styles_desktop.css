@@ -116,6 +116,7 @@ article {
 section>p {
     text-align: justify;
     margin-bottom: 16px;
+    text-indent: 2em;
 }
 
 article>header {
