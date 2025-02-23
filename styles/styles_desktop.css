@@ -20,8 +20,7 @@ body {
     display: flex;
     gap: 50px;
     align-items: flex-start;
-    padding: 20px;
-    padding-left: 8cm;
+    margin-left: 200px;
 }
 
 .poema {
@@ -70,14 +69,11 @@ body {
 
 .poema2 {
     margin-top: 20px;
+    display: block;
+    text-align: justify;
+    width: 435px;
 }
 
-.poema2 p {
-    text-align: justify;
-    max-width: 600px;
-    width: 90%;
-    margin: auto;
-}
 /***/
 
 img[src="../img/under-construction.gif"] {
@@ -105,9 +101,23 @@ a:visited {
 a:hover {
     text-decoration: line-through;
     font-style: italic;
+}
+.alquimia {
+    width: min-content;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    max-width: 500px;
+    align-items: flex-start;
+}
 
     /*ARTICULOS*/
-}
+
 
 article {
     max-width: 600px;
