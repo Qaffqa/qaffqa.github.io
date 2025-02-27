@@ -10,30 +10,49 @@
             text-decoration: none;
             color: black;
         }
+
         a:hover {
             text-decoration: line-through;
             font-style: italic;
         }
+
         main {
             text-align: justify;
             text-indent: 5%;
             max-width: 500px;
             margin: 0 auto;
         }
+
         body {
-            margin:0 400px;
+            margin: 0 400px;
             background-image: url(../img/alfred-kubin-self-portrait.jpg);
             background-repeat: no-repeat;
             background-position-y: bottom;
             background-position-x: right;
-            background-size: 35%;    
+            background-size: 35%;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode a {
+            color: #80cbc4;
+        }
+
+        .dark-mode a:hover {
+            color: #4db6ac;
+            text-decoration: underline;
         }
     </style>
 </head>
 
-<body>
+<body class="dark-mode">
     <nav>
         <a href="../index.html">Volver</a>
+        <br>
+        <button id="darkModeToggle">Turn lights on</button>
     </nav>
     <main>
         <h1>El Dibujante</h1>
@@ -187,6 +206,16 @@
             (1922).
         </p>
     </main>
+
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode')
+                ? 'Turn lights on'
+                : 'Turn lights off';
+        });
+    </script>
 </body>
 
 </html>
