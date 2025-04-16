@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NúmeroGramática</title>
+    <style>
+        /* Estilo retro minimalista */
+        body {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            color: #000000;
+            text-align: center;
+            padding: 1rem 0;
+            border-bottom: solid 1px black;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .nav {
+            margin: 2rem;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 0.5rem;
+            font-size: 1rem;
+            width: 200px;
+            margin-right: 0.5rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .result {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        table {
+            margin: 2rem auto;
+            width: 30%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        td {
+            background-color: #e7e7e7;
+        }
+
+        ul {
+            margin: 2rem auto;
+            width: 30%;
+            list-style-type: square;
+            padding-left: 20px;
+            background-color: #fff;
+
+            border: 1px solid #333;
+        }
+
+        ul li {
+            margin: 0.5rem 0;
+        }
+
+        .num h3 {
+            text-align: center;
+            margin-top: 2rem;
+            color: #333;
+        }
+
+        @media screen and (max-width: 600px) {
+            input[type="text"] {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+
+            .nav {
+                margin: 1rem;
+                padding: 0 1rem;
+            }
+
+            button {
+                width: 100%;
+                font-size: 1rem;
+            }
+
+            table {
+                width: 90%;
+            }
+
+            ul {
+                width: 90%;
+                padding-left: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora Numerológica</h1>
+    </header>
+
+    <div class="nav">
+        <h3>Convierte Palabras a Números</h3>
+        <p>Introduce el nombre:</p>
+        <div class="content">
+            <input id="nameInput" type="text" placeholder="Escribe aquí">
+            <button id="calculateButton">Calcular</button>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <div class="num">
+        <h3>Numerología Pitagórica</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                    <td>F</td>
+                    <td>G</td>
+                    <td>H</td>
+                    <td>I</td>
+                </tr>
+                <tr>
+                    <td>J</td>
+                    <td>K</td>
+                    <td>L</td>
+                    <td>M</td>
+                    <td>N</td>
+                    <td>O</td>
+                    <td>P</td>
+                    <td>Q</td>
+                    <td>R</td>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>T</td>
+                    <td>U</td>
+                    <td>V</td>
+                    <td>W</td>
+                    <td>X</td>
+                    <td>Y</td>
+                    <td>Z</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>El método pitagórico fue desarrollado por Pitágoras, un matemático griego del siglo VI.</li>
+            <li>Los números van del 1 al 9.</li>
+            <li>Es el sistema más conocido y usado por numerólogos modernos.</li>
+            <li>Asigna números en secuencia: A=1, B=2, C=3, etc.</li>
+            <li>También se le conoce como numerología occidental o moderna.</li>
+        </ul>
+
+        <h3>Numerología Caldea</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                    <td>U</td>
+                    <td>O</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>I</td>
+                    <td>K</td>
+                    <td>G</td>
+                    <td>M</td>
+                    <td>H</td>
+                    <td>V</td>
+                    <td>Z</td>
+                    <td>P</td>
+                </tr>
+                <tr>
+                    <td>J</td>
+                    <td>R</td>
+                    <td>L</td>
+                    <td>T</td>
+                    <td>N</td>
+                    <td>W</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>El sistema caldeo es el más antiguo, originado en Babilonia.</li>
+            <li>Asigna valores del 1 al 8; el 9 se considera sagrado y no se incluye.</li>
+            <li>Se basa en las vibraciones entre letras y números.</li>
+            <li>Es más preciso y tiene en cuenta el nombre por el que eres conocido.</li>
+        </ul>
+    </div>
+
+    <a href="https://suspha.github.io/numerology/?ref=thehalalplanet.com">[Fuente]</a>
+    <script>
+        const PYTHAGOREAN = {
+            'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9,
+            'j': 1, 'k': 2, 'l': 3, 'm': 4, 'n': 5, 'o': 6, 'p': 7, 'q': 8, 'r': 9,
+            's': 1, 't': 2, 'u': 3, 'v': 4, 'w': 5, 'x': 6, 'y': 7, 'z': 8
+        };
+
+        const CHALDEAN = {
+            'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 8, 'g': 3, 'h': 5, 'i': 1,
+            'j': 1, 'k': 2, 'l': 3, 'm': 4, 'n': 5, 'o': 7, 'p': 8, 'q': 1, 'r': 2,
+            's': 3, 't': 4, 'u': 6, 'v': 6, 'w': 6, 'x': 5, 'y': 1, 'z': 7
+        };
+
+        const input = document.getElementById('nameInput');
+        const button = document.getElementById('calculateButton');
+        const resultDiv = document.getElementById('result');
+
+        button.addEventListener('click', () => {
+            const name = input.value.toLowerCase().replace(/[^a-z0-9]/g, '');
+            resultDiv.innerHTML = '';
+
+            const calculateSum = (mapping) => {
+                return name.split('').reduce((sum, char) => sum + (mapping[char] || 0), 0);
+            };
+
+            const pythagoreanSum = calculateSum(PYTHAGOREAN);
+            const chaldeanSum = calculateSum(CHALDEAN);
+
+            resultDiv.innerHTML += `<p>Pitagórica: ${pythagoreanSum}</p>`;
+            resultDiv.innerHTML += `<p>Caldea: ${chaldeanSum}</p>`;
+        });
+    </script>
+</body>
+
+</html>
