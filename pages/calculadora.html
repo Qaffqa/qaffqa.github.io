@@ -84,9 +84,9 @@
         ul {
             margin: 2rem auto;
             width: 30%;
-            list-style-type: square;
+            list-style-type: none;
             padding-left: 20px;
-            background-color: #fff;
+            
 
             border: 1px solid #333;
         }
@@ -149,8 +149,6 @@
     </header>
 
     <div class="nav">
-        <h3>Convierte Palabras a Números</h3>
-        <p>Introduce el nombre:</p>
         <div class="content">
             <input id="nameInput" type="text" placeholder="Escribe aquí">
             <button id="calculateButton">Calcular</button>
@@ -295,16 +293,27 @@
             const name = input.value.toLowerCase().replace(/[^a-z0-9]/g, '');
             resultDiv.innerHTML = '';
 
+            const createBreakdown = (mapping) => {
+                return name.split('').map(char => {
+                    const value = mapping[char] || 0;
+                    return `<li>${char.toUpperCase()} = ${value}</li>`;
+                }).join('');
+            };
+
             const calculateSum = (mapping) => {
                 return name.split('').reduce((sum, char) => sum + (mapping[char] || 0), 0);
             };
 
+            const pythagoreanBreakdown = createBreakdown(PYTHAGOREAN);
+            const chaldeanBreakdown = createBreakdown(CHALDEAN);
+
             const pythagoreanSum = calculateSum(PYTHAGOREAN);
             const chaldeanSum = calculateSum(CHALDEAN);
 
-            resultDiv.innerHTML += `<p>Pitagórica: ${pythagoreanSum}</p>`;
-            resultDiv.innerHTML += `<p>Caldea: ${chaldeanSum}</p>`;
+            resultDiv.innerHTML += `<p><strong>Pitagórica:</strong> ${pythagoreanSum}</p><ul>${pythagoreanBreakdown}</ul>`;
+            resultDiv.innerHTML += `<p><strong>Caldea:</strong> ${chaldeanSum}</p><ul>${chaldeanBreakdown}</ul>`;
         });
+
     </script>
 </body>
 
