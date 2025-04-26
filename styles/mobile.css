@@ -4,59 +4,7 @@ nav {
 }
 
 /* Estilos para dispositivos móviles */
-@media only screen and (max-width: 768px) {
-    header,
-    img[alt="Figure of Telesphorus"] {
-        display: none;
-    }
-
-    nav {
-        display: block;
-        font-size: larger;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
-    .aboutDesc {
-        position: inherit;
-        line-height: 130%;
-    }
-    .poema {
-        position: absolute;
-        right: -200px;
-
-    }
-
-    .ocurrencias {
-        position: absolute;
-        display: contents;
-    }
-    .contact {
-        position: absolute;
-        display: contents;
-    }
-
-    div.poema  p {
-        display: block;
-        margin: 0.5em 0;
-        line-height: 1.6;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-    }
-
-    .container {
-        display: block;
-        margin-left: 0;
-    }
-    #main {
-        width: 75%;
-    }
-}
-
-@media only screen and (max-width: 932px){
+@media only screen and (max-width: 900px) {
     header,
     img[alt="Figure of Telesphorus"] {
         display: none;
