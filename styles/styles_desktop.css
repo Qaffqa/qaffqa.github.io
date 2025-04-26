@@ -9,7 +9,7 @@ body {
 }
 
  
-:is(p, a, h1, pre, img, th)::selection{
+:is(p, a, h1, pre, img, th, ul, ol, li, h2, h3, h4, button)::selection{
     background-color: yellow;
     color: black;
 }
