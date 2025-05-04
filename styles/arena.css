@@ -1,0 +1,127 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #ac7d4f;
+    background-image: url(../img/stones-removebg-preview.png);
+    
+}
+
+header,
+footer {
+    flex: 0 0 auto;
+}
+
+footer p {
+    margin-bottom: 50px;
+    padding-left: 50px;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex: 1 1 auto;
+    gap: 10px;
+    height: 100%;
+    min-width: calc(100vh - 150px);
+}
+
+main,
+aside {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7d1ab9a;
+}
+
+main {
+    width: 45%;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+aside {
+    width: 30%;
+    padding: 10px;
+    border: 3px black double;
+    overflow-y: auto;
+}
+
+main+aside {
+    width: 25%;
+    padding: 10px;
+}
+
+p {
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+header h1 {
+    margin-left: 5%;
+}
+
+main {
+    width: 45%;
+    padding: 5px;
+}
+main h3 {
+    margin-top: 0;
+}
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+li:hover>.submenu {
+    display: block;
+}
+
+aside>div {
+    padding: 3px;
+    border: 3px solid black;
+    height: 308px;
+    width: 208px;
+    margin-left: 5px;
+}
+
+img.Portrait {
+    width: 200px;
+    padding: 3px;
+    border: 2px black solid;
+}
+
+
+
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow: auto;  
+        height: auto;    
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+    }
+
+    main,
+    aside {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    main + aside {
+        width: 100%;
+    }
+}
+
