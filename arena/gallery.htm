@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            background-color: black;
+            color: white;
+            border-left: 3px double white;
+            border-right: 3px double white;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        img {
+            width: 300px;
+            height: auto;
+            border: 1px solid white;
+            transition: transform 0.2s ease, filter 0.3s ease;
+        }
+
+        img:hover {
+            filter: brightness(1.1) contrast(1.2);
+        }
+
+        h1 {
+            margin-left: 5%;
+            margin-bottom: 0;
+            font-family: 'baroque', 'Times New Roman', Times, serif;
+        }
+
+        @font-face {
+            font-family: 'baroque';
+            src: url('../fonts/BaroqueTextJF Regular.ttf') format('truetype');
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Specula Imaginum</h1>
+    <marquee behavior="" direction="right">AI Concept mockups while work is in progress ...</marquee>
+    <div class="gallery">
+        <img src="moiré.png" alt="Moire">
+        <img src="street.png" alt="Street">
+        <img src="arcane.png" alt="Arcane">
+    </div>
+</body>
+
+</html>
