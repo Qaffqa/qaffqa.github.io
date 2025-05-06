@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000000;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    #player {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding: 0px 10px;
+    }
+
+    button {
+      background: none;
+      border: 1px solid #000000;
+      color: white;
+      padding: 4px 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #000000;
+    }
+
+    input[type="range"] {
+      width: 200px;
+    }
+
+    #track-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 200px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div id="player">
+    <button onclick="prev()">⏮</button>
+    <button onclick="togglePlay()">⏯</button>
+    <button onclick="next()">⏭</button>
+    <input type="range" id="seekbar" value="0" min="0" max="100">
+    <marquee id="track-name"></marquee>
+    <audio id="audio" autoplay></audio>
+  </div>
+
+  <script>
+    const audio = document.getElementById('audio');
+    const seekbar = document.getElementById('seekbar');
+    const trackName = document.getElementById('track-name');
+
+    const playlist = [
+      'music/Malfet - The Way To Avalon.mp3',
+      'music/Shrouded in Mistery - Beowolf-Stadt.mp3',
+      'music/Mortiis - Født til å Herske Part I.mp3'
+    ];
+    let current = 0;
+
+    function updateTrackInfo() {
+      trackName.textContent = playlist[current].split('/').pop();
+    }
+
+    function play(index) {
+      audio.src = playlist[index];
+      audio.play();
+      updateTrackInfo();
+    }
+
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+
+    function next() {
+      current = (current + 1) % playlist.length;
+      play(current);
+    }
+
+    function prev() {
+      current = (current - 1 + playlist.length) % playlist.length;
+      play(current);
+    }
+
+    audio.addEventListener('timeupdate', () => {
+      seekbar.value = (audio.currentTime / audio.duration) * 100 || 0;
+    });
+
+    seekbar.addEventListener('input', () => {
+      audio.currentTime = (seekbar.value / 100) * audio.duration;
+    });
+
+    audio.addEventListener('ended', next);
+
+    // Autoplay first track on load
+    window.onload = () => {
+      play(current);
+    };
+  </script>
+</body>
+</html>
