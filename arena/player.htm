@@ -46,6 +46,17 @@
       max-width: 200px;
       font-size: 14px;
     }
+
+    #player-button-link{
+      text-decoration: none;
+      color: white;
+    }
+    #buttonbox{
+      border: 1px inset white;
+      padding: 3px;
+      margin-left: 10px;
+      margin-top: 3px;
+    }
   </style>
 </head>
 <body>
@@ -55,6 +66,7 @@
     <button onclick="next()">⏭</button>
     <input type="range" id="seekbar" value="0" min="0" max="100">
     <marquee id="track-name"></marquee>
+    <span id="buttonbox"><a href="boxplayer.html" target="content" id="player-button-link">open player</a></span>
     <audio id="audio" autoplay></audio>
   </div>
 
