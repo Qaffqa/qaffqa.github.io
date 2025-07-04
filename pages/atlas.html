@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Atlas Menor Poético</title>
+  <link rel="shortcut icon" href="../img/image.ico" type="image/x-icon">
   <style>
     body {
       font-family: monospace;
       margin: 0;
       padding: 0;
     }
+
     #contenedor {
       display: flex;
       height: 100vh;
     }
+
     #indice {
       width: 200px;
       border-left: 1px solid black;
@@ -21,44 +25,51 @@
       overflow-y: auto;
       background-color: #f0f0f0;
     }
+
     #visor {
       flex: 1;
       padding: 0;
     }
+
     iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
+
     a {
       display: block;
       margin-bottom: 8px;
       text-decoration: none;
       color: black;
     }
+
     a:hover {
       background-color: #ddd;
     }
   </style>
 </head>
+
 <body>
 
-<div id="contenedor">
-  <div id="visor">
-    <iframe id="pdf-frame" src="../ATLASMENOR.pdf"></iframe>
+  <div id="contenedor">
+    <div id="visor">
+      <iframe id="pdf-frame" src="../ATLASMENOR.pdf"></iframe>
+    </div>
+    <div id="indice">
+      <b>Índice</b>
+      <a href="#" onclick="cargarPDF('../ATLASMENOR.pdf')">Atlas Menor Poético - en prgreso</a>
+      <a href="#" onclick="cargarPDF('elegia.html')">Elegía a la muerte del mastín - en progreso</a>
+      <a href="#" onclick="cargarPDF('glosas.html')">Glosas - en progreso</a>
+    </div>
   </div>
-  <div id="indice">
-    <b>Índice</b>
-    <a href="#" onclick="cargarPDF('../ATLASMENOR.pdf')">Atlas Menor Poético - en prgreso</a>
-    <a href="#" onclick="cargarPDF('elegia.html')">Elegía a la muerte del mastín - en progreso</a>
-  </div>
-</div>
 
-<script>
-  function cargarPDF(nombre) {
-    document.getElementById('pdf-frame').src = nombre;
-  }
-</script>
+  <script>
+    function cargarPDF(nombre) {
+      document.getElementById('pdf-frame').src = nombre;
+    }
+  </script>
 
 </body>
+
 </html>
